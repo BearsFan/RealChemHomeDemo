@@ -13,7 +13,9 @@ var ME = {};
     ME.startListeners();  
 	}
   
-  ME.startListeners = function() {         
+  ME.startListeners = function() {     
+    
+     let container = document.getElementById("#group1");    
     
       gsap.utils.toArray("#group1").forEach(section => {
       	
@@ -22,7 +24,8 @@ var ME = {};
       				trigger: section,
       				start: "top top",
               // makes the height of the scrolling (while pinning) match the width, thus the speed remains constant (vertical/horizontal)
-      				end: () => "+=" + section.offsetWidth * 1, 
+      				end: () => "+=" + section.offsetWidth , 
+              x: () => -(container.scrollWidth - document.documentElement.clientWidth) + "px",
       				scrub: true,
       				pin: true,
               anticipatePin: 1
