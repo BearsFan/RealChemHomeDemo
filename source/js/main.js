@@ -2,7 +2,6 @@
 
 window.jQuery = window.$ = $; 
 
-
 // Main JS file
 
 var ME = {};
@@ -18,7 +17,11 @@ var ME = {};
 
     let slides = gsap.utils.toArray(".slide");
     
-    let container = document.getElementById("#group1"); 
+    let container = document.getElementById("#group1");
+    
+    let footerHeight = document.getElementById('footer').clientHeight;
+         
+    //gsap.set(slides, {xPercent: -100, x: 0});
     
     slides.shift(); // leave the first slide alone (remove it from the Array)
         
@@ -27,12 +30,11 @@ var ME = {};
     tl = gsap.timeline({
         scrollTrigger: {
           trigger: "#group1",    
-          endTrigger: "#footer", // change this to match whatever is coming after the slides
+          end: "+=300%",          
           start: "top top",
-          end: "top bottom",
           scrub: true,
           pin: true,
-          pinSpacing: false,
+
         },
         defaults: {ease: "none"}
     });
@@ -68,7 +70,7 @@ var ME = {};
       }
       
     });
-
+    
 
   	}
     
