@@ -17,6 +17,14 @@
       "oAP" : "\/build\/.editorconfig",
       "oF" : 0
     },
+    "\/.gitattributes" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/build\/.gitattributes",
+      "oF" : 0
+    },
     "\/.htaccess" : {
       "cB" : 0,
       "ft" : 8192,
@@ -703,6 +711,29 @@
       "oAP" : "\/build\/img\/.gitignore",
       "oF" : 0
     },
+    "\/source\/img\/button.svg" : {
+      "ft" : 2097152,
+      "miP" : 0,
+      "oA" : 2,
+      "oAP" : "\/build\/img\/button.svg",
+      "oF" : 0,
+      "opt" : 0,
+      "plM" : 52780316221407,
+      "prP" : 0
+    },
+    "\/source\/img\/footer.png" : {
+      "ft" : 32768,
+      "iS" : 114420,
+      "oA" : 0,
+      "oAP" : "\/build\/img\/footer.png",
+      "oF" : 0,
+      "oIPL" : 0,
+      "opt" : 1,
+      "oT" : 1,
+      "ou" : "lpckwebp-none",
+      "q" : 100,
+      "rq" : 75
+    },
     "\/source\/img\/home_hero1.svg" : {
       "ft" : 2097152,
       "miP" : 0,
@@ -723,6 +754,16 @@
       "plM" : 52780316221407,
       "prP" : 0
     },
+    "\/source\/img\/home_hero3.svg" : {
+      "ft" : 2097152,
+      "miP" : 0,
+      "oA" : 2,
+      "oAP" : "\/build\/img\/home_hero3.svg",
+      "oF" : 0,
+      "opt" : 0,
+      "plM" : 52780316221407,
+      "prP" : 0
+    },
     "\/source\/js\/.Rhistory" : {
       "cB" : 0,
       "ft" : 8192,
@@ -730,6 +771,17 @@
       "oA" : 0,
       "oAP" : "\/build\/js\/.Rhistory",
       "oF" : 0
+    },
+    "\/source\/js\/main-backup.js" : {
+      "bF" : 0,
+      "ft" : 64,
+      "ma" : 0,
+      "mi" : 1,
+      "oA" : 0,
+      "oAP" : "\/build\/js\/main-backup-min.js",
+      "oF" : 0,
+      "sC" : 3,
+      "tS" : 0
     },
     "\/source\/js\/main.js" : {
       "bF" : 4,

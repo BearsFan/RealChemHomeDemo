@@ -1,5 +1,4 @@
-import $ from "jquery";
-import 'slick-carousel';
+//import $ from "jquery";
 
 window.jQuery = window.$ = $; 
 
@@ -11,35 +10,75 @@ var ME = {};
 (function($) {
 
 	ME._init = function() {	    
-    ME.startListeners();      
+    ME.startListeners();  
 	}
   
-	ME.startListeners = function() {         
+  ME.startListeners = function() {         
     
-    gsap.utils.toArray(".parallax").forEach(section => {
-    	let tl = gsap.timeline({
-    			scrollTrigger: {
-    				trigger: section,
-    				start: "top top",
-            // makes the height of the scrolling (while pinning) match the width, thus the speed remains constant (vertical/horizontal)
-    				end: () => "+=" + section.offsetWidth, 
-    				scrub: true,
-    				pin: true,
-            anticipatePin: 1
-    			},
-    			defaults: {ease: "none"}
-    		});
-    	// animate the container one way...
-    	tl.fromTo(section.querySelector("#slide2"), { xPercent: 100, x: 0}, {xPercent: 0})
-    	  // ...and the image the opposite way (at the same time)
-    	  .fromTo(section.querySelector("#slide2 .slide-wrapper"), {xPercent: -100, x: 0}, {xPercent: 0}, 0);
-    });
-    
-	}
-  
 
+    let slides = gsap.utils.toArray(".slide");
+    slides.shift(); // leave the first slide alone (remove it from the Array)
+    gsap.set(slides, {xPercent: -100, x: 0});
+    let section = document.querySelector("#group1"),
+      tl = gsap.timeline({
+        scrollTrigger: {
+          trigger: "#group1",
+          start: "top top",
+          end: "max",
+          scrub: true,
+          pin: true,
+          pinSpacing: false,
+          //anticipatePin: 1
+        },
+        defaults: {ease: "none"}
+      });
+    slides.forEach((slide, i) => {
+      if ( i == 1) {
+        tl.fromTo(slide, {
+          xPercent: 100,
+          x: 0,
+        }, {
+          xPercent: 0,
+        })
+        .fromTo(slide.querySelector(".slide-wrapper"), {
+          xPercent: -100,
+          x: 0
+        }, {
+          xPercent: 0,
+        }, "<");
+      }
+      else {
+        tl.fromTo(slide, {
+          xPercent: -100,
+          x: 0,
+        }, {
+          xPercent: 0,
+        })
+        .fromTo(slide.querySelector(".slide-wrapper"), {
+          xPercent: 100,
+          x: 0
+        }, {
+          xPercent: 0,
+        }, "<");
+      }
+      
+    });
+
+
+
+  	}
+    
+
+    
+    const animateText = () => {
+        setTimeout(async () => {
+           gsap.to("h1", {y: "0%", duration: 0.5})
+           //gsap.to(".introText", {y: "0%", duration: 0.4, delay: 0.8})  
+        }, [2000])
+    }
+    
+    animateText();    
   
-	
 
 })($);
 
