@@ -119,12 +119,12 @@ section.parallax {
       @include respond(1024px) {
         div {
           h1 {
-            font-size:65px;
-            line-height:75px;
+            font-size:60px;
+            line-height:60px;
           }
           p {
             font-size:16px;
-            line-height:24px;
+            line-height:20px;
           }
         }
       }
@@ -135,7 +135,7 @@ section.parallax {
             line-height:65px;
           }
           p {
-            font-size:14px;
+            font-size:16px;
             line-height:20px;
           }
         }
@@ -238,6 +238,11 @@ section.parallax {
             left:auto;
             right:auto;
             max-width:100%;
+            padding:2% 0 0 0%;
+            h3 {
+              font-size:20px;
+              line-height:24px;
+            }
           }
         }
       }
@@ -282,6 +287,7 @@ section.parallax {
             left:auto;
             right:auto;
             max-width:100%;
+            padding:2% 0 0 0%;
           }
         }
       }

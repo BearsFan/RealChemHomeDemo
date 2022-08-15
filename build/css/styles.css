@@ -617,12 +617,12 @@ section.parallax .slide .slide-wrapper div p {
 }
 @media screen and (max-width: 1024px) {
   section.parallax .slide .slide-wrapper div h1 {
-    font-size: 65px;
-    line-height: 75px;
+    font-size: 60px;
+    line-height: 60px;
   }
   section.parallax .slide .slide-wrapper div p {
     font-size: 16px;
-    line-height: 24px;
+    line-height: 20px;
   }
 }
 @media screen and (max-width: 768px) {
@@ -631,7 +631,7 @@ section.parallax .slide .slide-wrapper div p {
     line-height: 65px;
   }
   section.parallax .slide .slide-wrapper div p {
-    font-size: 14px;
+    font-size: 16px;
     line-height: 20px;
   }
 }
@@ -714,6 +714,11 @@ section.parallax .slide#slide2 .slide-wrapper .content div p {
     left: auto;
     right: auto;
     max-width: 100%;
+    padding: 2% 0 0 0%;
+  }
+  section.parallax .slide#slide2 .slide-wrapper .content h1 h3, section.parallax .slide#slide2 .slide-wrapper .content div h3 {
+    font-size: 20px;
+    line-height: 24px;
   }
 }
 
@@ -752,6 +757,7 @@ section.parallax .slide#slide3 .slide-wrapper .content div p {
     left: auto;
     right: auto;
     max-width: 100%;
+    padding: 2% 0 0 0%;
   }
 }
 
