@@ -24,7 +24,7 @@ var ME = {};
         scrollTrigger: {
           trigger: "#group1",
           start: "top top",
-          end: "max",
+          end: () => "+=" + section.offsetWidth, 
           scrub: true,
           pin: true,
           pinSpacing: false,
@@ -33,7 +33,7 @@ var ME = {};
         defaults: {ease: "none"}
       });
     slides.forEach((slide, i) => {
-      if ( i == 1) {
+      if ( i == 1) { // check if first slide
         tl.fromTo(slide, {
           xPercent: 100,
           x: 0,
@@ -47,7 +47,7 @@ var ME = {};
           xPercent: 0,
         }, "<");
       }
-      else {
+      else { // check if not first slide
         tl.fromTo(slide, {
           xPercent: -100,
           x: 0,

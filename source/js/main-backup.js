@@ -22,7 +22,7 @@ var ME = {};
       				trigger: section,
       				start: "top top",
               // makes the height of the scrolling (while pinning) match the width, thus the speed remains constant (vertical/horizontal)
-      				end: () => "+=" + section.offsetWidth, 
+      				end: () => "+=" + section.offsetWidth * 1, 
       				scrub: true,
       				pin: true,
               anticipatePin: 1

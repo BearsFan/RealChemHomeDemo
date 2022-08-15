@@ -1201,12 +1201,17 @@ body.nav-open header .wrapper #burger #search_submit, html.nav-open header .wrap
 
 /*! footer styles */
 /* page styles */
-.pin-spacer {
-  height: 300vh;
+section {
+  width: 100%;
+  max-width: 100%;
+  overflow: hidden;
+}
+section img {
+  max-width: 100%;
 }
 
 section.parallax {
-  height: 100vh;
+  height: 300vh;
   width: 100vw;
   position: relative;
   padding-bottom: 56.25%;
@@ -1217,6 +1222,7 @@ section.parallax .slide {
   position: absolute;
   top: 0;
   left: 0;
+  z-index: 5;
 }
 section.parallax .slide .slide-wrapper {
   width: 100%;
@@ -1224,6 +1230,19 @@ section.parallax .slide .slide-wrapper {
   position: relative;
   top: 0;
   text-align: left;
+}
+section.parallax .slide .slide-wrapper .bgimage {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+section.parallax .slide .slide-wrapper .content {
+  position: relative;
+  width: 100%;
+  height: 100%;
 }
 section.parallax .slide .slide-wrapper h1 {
   font-size: 170px;
@@ -1332,6 +1351,24 @@ section.parallax .slide .slide-wrapper div p {
   font-family: Helvetica, sans-serif;
   font-weight: 400;
 }
+@media screen and (max-width: 1440px) {
+  section.parallax .slide .slide-wrapper h1 {
+    font-size: 80px;
+    line-height: 85px;
+  }
+}
+@media screen and (max-width: 1024px) {
+  section.parallax .slide .slide-wrapper h1 {
+    font-size: 65px;
+    line-height: 75px;
+  }
+}
+@media screen and (max-width: 768px) {
+  section.parallax .slide .slide-wrapper h1 {
+    font-size: 55px;
+    line-height: 65px;
+  }
+}
 
 body {
   height: 300vh;
@@ -1360,6 +1397,16 @@ section .slide#slide1 .slide-wrapper .content div {
 section .slide#slide1 .slide-wrapper .content div p {
   color: #fff;
 }
+@media screen and (max-width: 768px) {
+  section .slide#slide1 .slide-wrapper .content h1, section .slide#slide1 .slide-wrapper .content div {
+    position: relative;
+    top: auto;
+    bottom: auto;
+    left: auto;
+    right: auto;
+    max-width: 100%;
+  }
+}
 
 section .slide#slide2 {
   position: absolute;
@@ -1372,9 +1419,8 @@ section .slide#slide2 .slide-wrapper {
   transform: translate(-100%, 0px);
 }
 section .slide#slide2 .slide-wrapper .content h1 {
-  position: absolute;
-  top: 5%;
-  left: 5%;
+  position: relative;
+  padding: 2% 0 0 5%;
   background: linear-gradient(180deg, #A036F5 34.9%, #8C31F4 68.23%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -1382,14 +1428,26 @@ section .slide#slide2 .slide-wrapper .content h1 {
   text-fill-color: transparent;
 }
 section .slide#slide2 .slide-wrapper .content div {
-  position: absolute;
-  left: 17.5%;
-  bottom: 5%;
+  position: relative;
+  padding: 2% 0 0 17%;
   max-width: 50%;
+}
+section .slide#slide2 .slide-wrapper .content div h3 {
+  color: #000;
 }
 section .slide#slide2 .slide-wrapper .content div p {
   color: #000;
   line-height: 120%;
+}
+@media screen and (max-width: 768px) {
+  section .slide#slide2 .slide-wrapper .content h1, section .slide#slide2 .slide-wrapper .content div {
+    position: relative;
+    top: auto;
+    bottom: auto;
+    left: auto;
+    right: auto;
+    max-width: 100%;
+  }
 }
 
 section .slide#slide3 {
@@ -1404,28 +1462,27 @@ section .slide#slide3 .slide-wrapper {
 }
 section .slide#slide3 .slide-wrapper .content h1 {
   color: #fff;
-  position: absolute;
-  top: 5%;
-  left: 5%;
+  position: relative;
+  padding: 2% 0 0 10%;
 }
 section .slide#slide3 .slide-wrapper .content div {
-  position: absolute;
-  left: 5%;
-  bottom: 5%;
+  position: relative;
+  padding: 2% 0 0 10%;
   max-width: 50%;
 }
 section .slide#slide3 .slide-wrapper .content div p {
   color: #fff;
   line-height: 120%;
 }
-
-.bgimage {
-  position: absolute;
-  width: 100vw;
-  height: 100vh;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
+@media screen and (max-width: 768px) {
+  section .slide#slide3 .slide-wrapper .content h1, section .slide#slide3 .slide-wrapper .content div {
+    position: relative;
+    top: auto;
+    bottom: auto;
+    left: auto;
+    right: auto;
+    max-width: 100%;
+  }
 }
 
 /*# sourceMappingURL=styles.css.map */
