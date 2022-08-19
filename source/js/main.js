@@ -77,9 +77,9 @@ var ME = {};
    
     const animateText = () => {
         setTimeout(async () => {
-           gsap.to("h1", {y: "0%", duration: 0.5})
-           //gsap.to(".introText", {y: "0%", duration: 0.4, delay: 0.8})  
-        }, [2000])
+           gsap.to("#slide1 h1", {y: "0%", opacity: "1",  duration: 0.5})
+           gsap.to("#slide1 .content div", {y: "0%", opacity: "1", duration: 0.5, delay: 0.8})  
+        }, [1000])
     }
     
     animateText();    
